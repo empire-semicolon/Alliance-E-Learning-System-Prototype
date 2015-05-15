@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Personal/Alliance%20Software,%20Inc.%20Bridge%20Program%202015/AES%20by%20empire-semicolon/Alliance%20E-Learning%20System%20Prototype/web/index.html</file>
+            <file>file:/C:/Users/Bryan/Desktop/Alliance-E-Learning-System-Prototype/Main%20Project/src/java/com/aes/controller/dummyController</file>
+            <file>file:/C:/Users/Bryan/Desktop/Alliance-E-Learning-System-Prototype/Main%20Project/src/java/com/aes/model/UserBean.java</file>
+            <file>file:/C:/Users/Bryan/Desktop/Alliance-E-Learning-System-Prototype/Main%20Project/src/java/com/aes/model/CourseBean.java</file>
+            <file>file:/C:/Users/Bryan/Desktop/Alliance-E-Learning-System-Prototype/Main%20Project/src/java/com/aes/util/DbUtil.java</file>
+            <file>file:/C:/Users/Bryan/Desktop/Alliance-E-Learning-System-Prototype/Main%20Project/src/java/com/aes/model/PresentationBean.java</file>
+            <file>file:/C:/Users/Bryan/Desktop/Alliance-E-Learning-System-Prototype/Main%20Project/src/java/db.properties</file>
+            <file>file:/C:/Users/Bryan/Desktop/Alliance-E-Learning-System-Prototype/Main%20Project/src/java/com/aes/model/ExamBean.java</file>
         </group>
     </open-files>
 </project-private>
