@@ -14,7 +14,8 @@ import java.sql.Timestamp;
 public class CourseBean {
     
     public int intCourseId;
-    public String strDescription;
+    public String strCourseTitle;
+    public String strCourseOutline;
     public Timestamp tsDateCreated;
     public Timestamp tsLastEdited;
     public int intCategoryId;
@@ -27,12 +28,20 @@ public class CourseBean {
         this.intCourseId = intCourseId;
     }
 
-    public String getStrDescription() {
-        return strDescription;
+    public String getStrCourseTitle() {
+        return strCourseTitle;
     }
 
-    public void setStrDescription(String strDescription) {
-        this.strDescription = strDescription;
+    public void setStrCourseTitle(String strCourseTitle) {
+        this.strCourseTitle = strCourseTitle;
+    }
+
+    public String getStrCourseOutline() {
+        return strCourseOutline;
+    }
+
+    public void setStrCourseOutline(String strCourseOutline) {
+        this.strCourseOutline = strCourseOutline;
     }
 
     public Timestamp getTsDateCreated() {
@@ -58,6 +67,10 @@ public class CourseBean {
     public void setIntCategoryId(int intCategoryId) {
         this.intCategoryId = intCategoryId;
     }
-        
-   
+
+    @Override
+    public String toString() {
+        return "CourseBean{" + "intCourseId=" + intCourseId + ", strCourseTitle=" + strCourseTitle + ", strCourseOutline=" + strCourseOutline + ", tsDateCreated=" + tsDateCreated + ", tsLastEdited=" + tsLastEdited + ", intCategoryId=" + intCategoryId + '}';
+    }
+
 }

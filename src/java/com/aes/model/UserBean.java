@@ -26,6 +26,7 @@ public class UserBean {
     public Timestamp tsDateCreated;
     public int intRecordStatus;
     public int intUserTypeID;
+    public String strBusinessUnit;
 
     public int getIntUserId() {
         return intUserId;
@@ -122,10 +123,18 @@ public class UserBean {
     public void setIntUserTypeID(int intUserTypeID) {
         this.intUserTypeID = intUserTypeID;
     }
-    
-    
-    
-    
-    
-    
+
+    public String getStrBusinessUnit() {
+        return strBusinessUnit;
+    }
+
+    public void setStrBusinessUnit(String strBusinessUnit) {
+        this.strBusinessUnit = strBusinessUnit;
+    }
+
+    @Override
+    public String toString() {
+        return "UserBean{" + "intUserId=" + intUserId + ", strUserName=" + strUserName + ", strPassword=" + strPassword + ", strFirstName=" + strFirstName + ", strMiddleName=" + strMiddleName + ", strLastName=" + strLastName + ", dateBirthday=" + dateBirthday + ", strPosition=" + strPosition + ", strEmail=" + strEmail + ", tsDateCreated=" + tsDateCreated + ", intRecordStatus=" + intRecordStatus + ", intUserTypeID=" + intUserTypeID + ", strBusinessUnit=" + strBusinessUnit + '}';
+    }
+            
 }

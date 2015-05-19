@@ -3,61 +3,74 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.util;
+package com.aes.util;
 
-import java.io.InputStream;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.util.Properties;
 
 /**
  *
- * @author Bryan Cabansay
+ * @author asi
  */
 public class DbUtil {
-    
-    public Connection connection = null;
+    private Connection connection = null;
     
     public Connection getConnection(){
-        if (connection != null){
+        if(connection!=null)
             return connection;
-        }
         else{
             try{
                 Properties prop = new Properties();
-                InputStream inputStream = DbUtil.class.getClassLoader().getResourceAsStream("./db.properties");
+                InputStream inputStream = DbUtil.class.getClassLoader().getResourceAsStream("/db.properties");
                 prop.load(inputStream);
                 
                 String driver = prop.getProperty("driver");
                 String url = prop.getProperty("url");
-                String user = prop.getProperty("user");
+                String username = prop.getProperty("username");
                 String password = prop.getProperty("password");
                 Class.forName(driver);
-                connection = DriverManager.getConnection(url, user, password);                
-                
-            } catch (ClassNotFoundException e){
-                e.printStackTrace();
-            } catch (SQLException e){
-                e.printStackTrace();
-            } catch (Exception e){
+                connection = (Connection) DriverManager.getConnection(url, username, password);
+            }
+            catch(ClassNotFoundException e){
+                System.out.println("CLASS NOT FOUND");
                 e.printStackTrace();
             }
-            return connection;            
+            catch(SQLException e){
+                System.out.println("SQL EXCEPTION");
+                e.printStackTrace();
+            }
+            catch(FileNotFoundException e){
+                System.out.println("FILE NOT FOUND");
+                e.printStackTrace();
+            }
+            catch(IOException ex){
+                System.out.println("IO EXCEPTION");
+                ex.printStackTrace();
+            }
+            catch(Exception e){
+                System.out.println("EXCEPTION");
+                e.printStackTrace();
+            }
+            
+            
+            return connection;
         }
     }
     
     public boolean disconnect(){
         try{
             connection.close();
-        } catch (SQLException e){
-            e.printStackTrace();
-        } catch (Exception e){
+        }
+        catch(Exception e){
             e.printStackTrace();
         }
-        return true;       
+        
+        return true;
     }
-    
-    
-    
 }

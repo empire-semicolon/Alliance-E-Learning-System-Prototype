@@ -16,16 +16,24 @@ public class PresentationBean {
     public int intPresentationId;
     public String strFileName;
     public String strFileType;
-    public String strFilePath;
+    public String strDescription;
     public double dblFileSize;
-    public String strFileDescription;
     public Timestamp tsDateUploaded;
     public int intRecordStatus;
     public int intChapterId;
+    public String strFilePath;
 
     public int getIntPresentationId() {
         return intPresentationId;
     }
+
+    public String getStrFilePath() {
+        return strFilePath;
+    }
+
+    public void setStrFilePath(String strFilePath) {
+        this.strFilePath = strFilePath;
+    }            
 
     public void setIntPresentationId(int intPresentationId) {
         this.intPresentationId = intPresentationId;
@@ -47,12 +55,12 @@ public class PresentationBean {
         this.strFileType = strFileType;
     }
 
-    public String getStrFilePath() {
-        return strFilePath;
+    public String getStrDescription() {
+        return strDescription;
     }
 
-    public void setStrFilePath(String strFilePath) {
-        this.strFilePath = strFilePath;
+    public void setStrDescription(String strDescription) {
+        this.strDescription = strDescription;
     }
 
     public double getDblFileSize() {
@@ -61,15 +69,7 @@ public class PresentationBean {
 
     public void setDblFileSize(double dblFileSize) {
         this.dblFileSize = dblFileSize;
-    }
-
-    public String getStrFileDescription() {
-        return strFileDescription;
-    }
-
-    public void setStrFileDescription(String strFileDescription) {
-        this.strFileDescription = strFileDescription;
-    }
+    }    
 
     public Timestamp getTsDateUploaded() {
         return tsDateUploaded;
@@ -94,7 +94,10 @@ public class PresentationBean {
     public void setIntChapterId(int intChapterId) {
         this.intChapterId = intChapterId;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "PresentationBean{" + "intPresentationId=" + intPresentationId + ", strFileName=" + strFileName + ", strFileType=" + strFileType + ", strDescription=" + strDescription + ", dblFileSize=" + dblFileSize + ", tsDateUploaded=" + tsDateUploaded + ", intRecordStatus=" + intRecordStatus + ", intChapterId=" + intChapterId + ", strFilePath=" + strFilePath + '}';
+    }             
     
 }

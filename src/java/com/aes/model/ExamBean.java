@@ -14,10 +14,37 @@ import java.sql.Timestamp;
 public class ExamBean {
     
     public int intExamId;
+    public String strExamTitle;
     public Timestamp tsDateCreated;
     public Timestamp dateEdited;
     public String strQuestionDetails;
     public int intCourseId;
+    public Timestamp tsExamDue;
+    public float fTimeLimit;        
+
+    public String getStrExamTitle() {
+        return strExamTitle;
+    }
+
+    public void setStrExamTitle(String strExamTitle) {
+        this.strExamTitle = strExamTitle;
+    }
+
+    public Timestamp getTsExamDue() {
+        return tsExamDue;
+    }
+
+    public void setTsExamDue(Timestamp tsExamDue) {
+        this.tsExamDue = tsExamDue;
+    }
+
+    public float getfTimeLimit() {
+        return fTimeLimit;
+    }
+
+    public void setfTimeLimit(float fTimeLimit) {
+        this.fTimeLimit = fTimeLimit;
+    }
 
     public int getIntExamId() {
         return intExamId;
@@ -57,10 +84,11 @@ public class ExamBean {
 
     public void setIntCourseId(int intCourseId) {
         this.intCourseId = intCourseId;
+    }    
+
+    @Override
+    public String toString() {
+        return "ExamBean{" + "intExamId=" + intExamId + ", strExamTitle=" + strExamTitle + ", tsDateCreated=" + tsDateCreated + ", dateEdited=" + dateEdited + ", strQuestionDetails=" + strQuestionDetails + ", intCourseId=" + intCourseId + ", tsExamDue=" + tsExamDue + ", fTimeLimit=" + fTimeLimit + '}';
     }
-    
-    
-    
-    
     
 }
