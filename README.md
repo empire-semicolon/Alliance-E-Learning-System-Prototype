@@ -12,7 +12,9 @@ Database MySQL Workbench File: TBD
 ```
 
 #### Web Folder Structure
+
 pages/
+
 	* user/
 	* 
 		* course/
