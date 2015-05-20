@@ -37,7 +37,7 @@
                 <a href="#"><span class="glyphicon glyphicon-user"></span>  My Profile<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="UserController?p=viewProfile">View Profile</a>
+                        <a id="view_profile" href="UserController?p=viewProfile">View Profile</a>
                     </li>
                     <li>
                         <a href="UserController?p=editProfile">Edit Profile</a>

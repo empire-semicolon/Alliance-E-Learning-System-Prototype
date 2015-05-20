@@ -9,3 +9,7 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
+
+<!-- AJAX Scripts -->
+<script src="../dist/js/user_ajax.js"></script>
+<script src="../dist/js/admin_ajax.js"></script>

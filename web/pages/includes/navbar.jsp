@@ -4,7 +4,7 @@
     Author     : Mark
 --%>
 
-<%@page import="com.model.UserBean"%>
+<%@page import="com.aes.model.UserBean"%>
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; height: 50">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
