@@ -39,9 +39,9 @@ public class UserController extends HttpServlet {
     /**
      * MY PROFILE
      */
-    private static final String viewProfile = "/pages/view_profile.jsp";
-    private static final String editProfile = "/pages/edit_profile.jsp";
-    private static final String changePassword = "/pages/change_password.jsp";
+    private static final String viewProfile = "/pages/user/profile/view_profile.jsp";
+    private static final String editProfile = "/pages/user/profile/edit_profile.jsp";
+    private static final String changePassword = "/pages/user/profile/change_password.jsp";
 		
 		private final int userId = 20151234;
 
