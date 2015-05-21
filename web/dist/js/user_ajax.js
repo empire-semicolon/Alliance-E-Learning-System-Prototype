@@ -5,13 +5,67 @@ $(document).ready(function () {
 	$("#view_profile").click(function (e) {
 		e.preventDefault();
 
-		//No post data. Just get info in the session in the Controller
+		var postData = {
+            page: "viewProfile"
+        };
 
-		$.get("UserController?p=viewProfile", function (response) {
+		$.post("user", postData, function (response) {
 			$("#content").html(response);
 		});
 	});
 
+    /* Edit Profile */
+    $("#edit_profile").click(function (e) {
+        e.preventDefault();
+
+        var postData = {
+            page: "editProfile"
+        };
+
+        $.post("user", postData, function (response) {
+            $("#content").html(response);
+        });
+    });
+
+    /* Edit Profile */
+    $("#change_password").click(function (e) {
+        e.preventDefault();
+
+        var postData = {
+            page: "changePassword"
+        };
+
+        $.post("user", postData, function (response) {
+            $("#content").html(response);
+        });
+    });
+
+    /* Upcoming exams */
+    $("#upcoming_exams").click(function (e) {
+        e.preventDefault();
+
+        var postData = {
+            page: "upcomingExams"
+        };
+
+        $.post("user", postData, function (response) {
+            $("#content").html(response);
+        });
+    });
+
+    /* Past exams */
+    $("#past_exams").click(function (e) {
+        e.preventDefault();
+
+        var postData = {
+            page: "pastExams"
+        };
+
+        $.post("user", postData, function (response) {
+            $("#content").html(response);
+        });
+    });
+    /*
 	//mass search button
 	$("#mass_search").submit(function (e) {
 		e.preventDefault();
@@ -27,5 +81,5 @@ $(document).ready(function () {
 			$("#mass-search-content").html(response);
 			$('#table_id').dataTable();
 		});
-	});
+	});*/
 });

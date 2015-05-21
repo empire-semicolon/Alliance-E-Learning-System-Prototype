@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>UserController</servlet-name>
-        <url-pattern>/pages/UserController</url-pattern>
+        <url-pattern>/pages/user</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

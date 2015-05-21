@@ -25,10 +25,10 @@
                 <a href="#"><span class="glyphicon glyphicon-question-sign"></span>  My Exams<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="upcoming_exams.jsp">Upcoming Exams</a>
+                        <a id="upcoming_exams" href="upcoming_exams.jsp">Upcoming Exams</a>
                     </li>
                     <li>
-                        <a href="past_exams.jsp">Past Exams</a>
+                        <a id="past_exams" href="past_exams.jsp">Past Exams</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
@@ -37,13 +37,13 @@
                 <a href="#"><span class="glyphicon glyphicon-user"></span>  My Profile<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a id="view_profile" href="UserController?p=viewProfile">View Profile</a>
+                        <a id="view_profile" href="user/view_profile.jsp">View Profile</a>
                     </li>
                     <li>
-                        <a href="UserController?p=editProfile">Edit Profile</a>
+                        <a id="edit_profile" href="user/edit_profile.jsp">Edit Profile</a>
                     </li>
                     <li>
-                        <a href="change_password.jsp">Change Password</a>
+                        <a id="change_password" href="user/change_password.jsp">Change Password</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

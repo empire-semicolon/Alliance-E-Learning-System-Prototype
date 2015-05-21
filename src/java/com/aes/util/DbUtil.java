@@ -5,72 +5,61 @@
  */
 package com.aes.util;
 
+import java.io.InputStream;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.Connection;
+import java.sql.Timestamp;
 import java.util.Properties;
 
 /**
  *
- * @author asi
+ * @author Bryan Cabansay
  */
 public class DbUtil {
-    private Connection connection = null;
+    
+    public Connection connection = null;
     
     public Connection getConnection(){
-        if(connection!=null)
+        if (connection != null){
             return connection;
+        }
         else{
             try{
                 Properties prop = new Properties();
-                InputStream inputStream = DbUtil.class.getClassLoader().getResourceAsStream("/db.properties");
+                InputStream inputStream = DbUtil.class.getClassLoader().getResourceAsStream("./db.properties");
                 prop.load(inputStream);
                 
                 String driver = prop.getProperty("driver");
                 String url = prop.getProperty("url");
-                String username = prop.getProperty("username");
-                String password = prop.getProperty("password");
+                String user = prop.getProperty("user");                
                 Class.forName(driver);
-                connection = (Connection) DriverManager.getConnection(url, username, password);
-            }
-            catch(ClassNotFoundException e){
-                System.out.println("CLASS NOT FOUND");
+                connection = DriverManager.getConnection(url, user, "");                
+                
+            } catch (ClassNotFoundException e){
+                e.printStackTrace();
+            } catch (SQLException e){
+                e.printStackTrace();
+            } catch (Exception e){
                 e.printStackTrace();
             }
-            catch(SQLException e){
-                System.out.println("SQL EXCEPTION");
-                e.printStackTrace();
-            }
-            catch(FileNotFoundException e){
-                System.out.println("FILE NOT FOUND");
-                e.printStackTrace();
-            }
-            catch(IOException ex){
-                System.out.println("IO EXCEPTION");
-                ex.printStackTrace();
-            }
-            catch(Exception e){
-                System.out.println("EXCEPTION");
-                e.printStackTrace();
-            }
-            
-            
-            return connection;
+            return connection;            
         }
     }
     
     public boolean disconnect(){
         try{
             connection.close();
-        }
-        catch(Exception e){
+        } catch (SQLException e){
+            e.printStackTrace();
+        } catch (Exception e){
             e.printStackTrace();
         }
-        
-        return true;
+        return true;       
     }
+    
+    public static Timestamp getCurrentTime(){
+        return new Timestamp(System.currentTimeMillis());
+    }
+    
 }

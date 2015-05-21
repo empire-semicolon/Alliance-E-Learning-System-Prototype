@@ -6,7 +6,7 @@
 
 package com.aes.controller;
 
-import com.aes.dao.User_DAO;
+import com.aes.dao.UserDao;
 import com.aes.model.UserBean;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -105,7 +105,7 @@ public class UserController extends HttpServlet {
 //         */
         else if (action.equals("viewProfile") || action.equals("editProfile")
                 || action.equals("changePassword")) {
-            UserBean account = User_DAO.getUserById(user);
+            UserBean account = UserDao.getUserById(userId);
             request.setAttribute("account", account);
             if (action.equals("viewProfile")) {
                 forward = viewProfile;
@@ -164,24 +164,24 @@ public class UserController extends HttpServlet {
 //         */
        else if (action.equals("upcomingExams") || action.equals("pastExams")) {
            //get exams by accountID
-           request.setAttribute("exams", exams);
+           /*request.setAttribute("exams", exams);*/
            if (action.equals("upcomingExams")) {
                forward = upcomingExams;
-           } else if (action.equals(pastExams)
+           } else if (action.equals(pastExams))
           {
                forward = pastExams;
            }
        } else if (action.equals("takeExam") || action.equals("viewExam")) {
-           int examID = Integer.parseInt(request.getParameter("examID"));
+           /*int examID = Integer.parseInt(request.getParameter("examID"));
            ExamBean exam = SystemDao.getExamByID(examID);
-           request.setAttribute("exam", exam);
+           request.setAttribute("exam", exam);*/
            forward = exam;
        } /**
         * MY PROFILE
         */
         else if (action.equals("viewProfile") || action.equals("editProfile")
                 || action.equals("changePassword")) {
-            UserBean account = User_DAO.getUserById(user);
+            UserBean account = UserDao.getUserById(userId);
             request.setAttribute("account", account);
             if (action.equals("viewProfile")) {
                 System.out.println("View Profile Accessed");
