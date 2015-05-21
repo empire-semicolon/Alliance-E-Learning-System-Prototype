@@ -12,12 +12,30 @@ package com.aes.model;
 public class ChapterBean {
     
     public int intChapterId;
+    public int intChapterNumber;
+    public String strChapterTitle;
     public String strDescription;
     public int intCourseId;
 
     @Override
     public String toString() {
-        return "ChapterBean{" + "intChapterId=" + intChapterId + ", strDescription=" + strDescription + ", intCourseId=" + intCourseId + '}';
+        return "ChapterBean{" + "intChapterId=" + intChapterId + ", intChapterNumber=" + intChapterNumber + ", strChapterTitle=" + strChapterTitle + ", strDescription=" + strDescription + ", intCourseId=" + intCourseId + '}';
+    }    
+
+    public int getIntChapterNumber() {
+        return intChapterNumber;
+    }
+
+    public void setIntChapterNumber(int intChapterNumber) {
+        this.intChapterNumber = intChapterNumber;
+    }
+
+    public String getStrChapterTitle() {
+        return strChapterTitle;
+    }
+
+    public void setStrChapterTitle(String strChapterTitle) {
+        this.strChapterTitle = strChapterTitle;
     }
 
     public int getIntChapterId() {

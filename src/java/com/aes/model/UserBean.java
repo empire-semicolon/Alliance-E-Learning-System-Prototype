@@ -14,19 +14,28 @@ import java.sql.Timestamp;
  */
 public class UserBean {
     
-    public int intUserId;
-    public String strUserName;
-    public String strPassword;
-    public String strFirstName;
-    public String strMiddleName;
-    public String strLastName;
-    public Date dateBirthday;
-    public String strPosition;
-    public String strEmail;
+    public int intUserId = 0;
+    public String strUserName = "";
+    public String strPassword = "";
+    public String strFirstName = "";
+    public String strMiddleName = "";
+    public String strLastName = "";
+    public Date dateBirthday = null;
+    public String strPosition = "";
+    public String strEmail = "";
     public Timestamp tsDateCreated;
     public int intRecordStatus;
     public int intUserTypeID;
-    public String strBusinessUnit;
+    public String strBusinessUnit  = "";
+    public int intCompanyId;
+
+    public int getIntCompanyId() {
+        return intCompanyId;
+    }
+
+    public void setIntCompanyId(int intCompanyId) {
+        this.intCompanyId = intCompanyId;
+    }        
 
     public int getIntUserId() {
         return intUserId;
