@@ -8,10 +8,10 @@
                         <a href="j2ee_intermediate.jsp">J2EE Intermediate <span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
                             <li>
-                                <a href="j2ee_course_outline.jsp">Course Outline</a>
+                                <a href="static/j2ee_course_outline.jsp">Course Outline</a>
                             </li>
                             <li>
-                                <a href="j2ee_exams.jsp">Exams</a>
+                                <a href="static/j2ee_exams.jsp">Exams</a>
                         </li></ul>
                         <!-- /.nav-third-level -->
                     </li>

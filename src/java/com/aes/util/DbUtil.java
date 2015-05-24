@@ -32,9 +32,10 @@ public class DbUtil {
                 
                 String driver = prop.getProperty("driver");
                 String url = prop.getProperty("url");
-                String user = prop.getProperty("user");                
+                String user = prop.getProperty("user");
+                String pw = prop.getProperty("password");                
                 Class.forName(driver);
-                connection = DriverManager.getConnection(url, user, "");                
+                connection = DriverManager.getConnection(url, user, pw);                
                 
             } catch (ClassNotFoundException e){
                 e.printStackTrace();

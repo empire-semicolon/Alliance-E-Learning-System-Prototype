@@ -1,6 +1,7 @@
+
 <div class="row">
 	<div class="col-lg-12">
-		<h2 class="page-header">Past Exams</h2>
+		<h2 class="page-header">Exams - J2EE Intermediate</h2>
 	</div>
 	<!-- /.col-lg-12 -->
 </div>
@@ -8,6 +9,9 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><strong>Upcoming Exams</strong></h3>
+			</div>
 			<div class="panel-body">
 				<div class="table-responsive">
 					<table class="table table-striped">
@@ -16,35 +20,33 @@
 								<th>Title</th>
 								<th>Course</th>
 								<th>Due</th>
+								<th>Status</th>
 								<th>Time Limit</th>
-								<th>Score</th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Exam 1</td>
-								<td>Design Patterns</td>
-								<td>April 15, 2015 11:59pm</td>
+								<td>Java Assessment</td>
+								<td>J2EE Intermediate</td>
+								<td>May 15, 2015 11:59pm</td>
+								<td>Timed</td>
 								<td>90 mins</td>
-								<td>25/30</td>
 								<td>
-									<button type="button" class="btn btn-primary">View Exam</button>
-								</td>
-							</tr>
-							<tr>
-								<td>Exam 2</td>
-								<td>Design Patterns</td>
-								<td>April 26, 2015 11:59pm</td>
-								<td>90 mins</td>
-								<td>28/30</td>
-								<td>
-									<button type="button" class="btn btn-primary">View Exam</button>
+									<button type="button" class="btn btn-primary">Take Exam</button>
 								</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><strong>Past Exams</strong></h3>
+			</div>
+			<div class="panel-body">
+				<p>No past exams.</p>
 			</div>
 		</div>
 	</div>

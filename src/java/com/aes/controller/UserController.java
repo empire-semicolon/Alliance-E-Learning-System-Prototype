@@ -28,9 +28,9 @@ public class UserController extends HttpServlet {
     /**
      * MY COURSES
      */
-    private static final String courseOutline = "/pages/course_outline.jsp";
-    private static final String examsByCourse = "/pages/course_exams.jsp";
-    private static final String pastCourses = "/pages/past_courses.jsp";
+    private static final String courseOutline = "/pages/user/course/course_outline.jsp";
+    private static final String examsByCourse = "/pages/user/course/course_exams.jsp";
+    private static final String pastCourses = "/pages/user/course/past_courses.jsp";
     private static final String course = "/pages/course.jsp";
     /**
      * MY EXAMS
@@ -45,7 +45,7 @@ public class UserController extends HttpServlet {
     private static final String editProfile = "/pages/user/profile/edit_profile.jsp";
     private static final String changePassword = "/pages/user/profile/change_password.jsp";
 		
-		private final int userId = 20151234;
+		private final int userId = 20151234; 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -68,41 +68,42 @@ public class UserController extends HttpServlet {
          */
         if (action.equals("courseOutline")) {
             //get course outline by courseID
-            request.setAttribute("course_outline", courseOutline);
+            //request.setAttribute("course_outline", courseOutline);
             forward = courseOutline;
-        }// else if (action.equals("examsByCourse")) {
-//            //get exams by courseID
-//            request.setAttribute("exams", exams);
-//            forward = examsByCourse;
-//        } else if (action.equals("pastCourses")) {
-//            //get past courses by accountID
-//            request.setAttribute("courses", courses);
-//            forward = pastCourses;
-//        } else if (action.equals("viewCourse")) {
-//            int courseID = Integer.parseInt(request.getParameter("courseID"));
-//            CourseBean course = SystemDao.getCourseByID(courseID);
-//            request.setAttribute("course", course);
-//            forward = course;
-//        } /**
-//         * MY EXAMS
-//         */
-//        else if (action.equals("upcomingExams") || action.equals("pastExams")) {
-//            //get exams by accountID
-//            request.setAttribute("exams", exams);
-//            if (action.equals("upcomingExams")) {
-//                forward = upcomingExams;
-//            } else if (action.equals(pastExams)
-//    		 {
-//                forward = pastExams;
-//            }
-//        } else if (action.equals("takeExam") || action.equals("viewExam")) {
-//            int examID = Integer.parseInt(request.getParameter("examID"));
-//            ExamBean exam = SystemDao.getExamByID(examID);
-//            request.setAttribute("exam", exam);
-//            forward = exam;
-//        } /**
-//         * MY PROFILE
-//         */
+        } else if (action.equals("examsByCourse")) {
+           //get exams by courseID
+           //request.setAttribute("exams", exams);
+           forward = examsByCourse;
+       } else if (action.equals("pastCourses")) {
+           //get past courses by accountID
+           //request.setAttribute("courses", courses);
+           forward = pastCourses;
+       } else if (action.equals("viewCourse")) {
+           //int courseID = Integer.parseInt(request.getParameter("courseID"));
+           //CourseBean course = SystemDao.getCourseByID(courseID);
+           //request.setAttribute("course", course);
+           forward = course;
+       } 
+       /***
+        * MY EXAMS
+        */
+       else if (action.equals("upcomingExams") || action.equals("pastExams")) {
+           //get exams by accountID
+           //request.setAttribute("exams", exams);
+           if (action.equals("upcomingExams")) {
+               forward = upcomingExams;
+           } else if (action.equals("pastExams"))
+   		 {
+               forward = pastExams;
+           }
+       } else if (action.equals("takeExam") || action.equals("viewExam")) {
+           //int examID = Integer.parseInt(request.getParameter("examID"));
+           //ExamBean exam = SystemDao.getExamByID(examID);
+           //request.setAttribute("exam", exam);
+           forward = exam;
+       } /**
+        * MY PROFILE
+        */
         else if (action.equals("viewProfile") || action.equals("editProfile")
                 || action.equals("changePassword")) {
             UserBean account = UserDao.getUserById(userId);
@@ -181,7 +182,7 @@ public class UserController extends HttpServlet {
         */
         else if (action.equals("viewProfile") || action.equals("editProfile")
                 || action.equals("changePassword")) {
-            UserBean account = UserDao.getUserById(userId);
+            UserBean account = UserDao.getUserById(20151234);
             request.setAttribute("account", account);
             if (action.equals("viewProfile")) {
                 System.out.println("View Profile Accessed");

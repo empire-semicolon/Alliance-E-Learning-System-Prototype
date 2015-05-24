@@ -65,6 +65,46 @@ $(document).ready(function () {
             $("#content").html(response);
         });
     });
+
+    /* course_outline */
+    $("#course_outline").click(function (e) {
+        e.preventDefault();
+
+        var postData = {
+            page: "courseOutline"
+        };
+
+        $.post("user", postData, function (response) {
+            $("#content").html(response);
+        });
+    });
+
+    /* Course exams */
+    $("#course_exams").click(function (e) {
+        e.preventDefault();
+
+        var postData = {
+            page: "examsByCourse"
+        };
+
+        $.post("user", postData, function (response) {
+            $("#content").html(response);
+        });
+    });
+
+    /* Course exams */
+    $("#past_courses").click(function (e) {
+        e.preventDefault();
+
+        var postData = {
+            page: "pastCourses"
+        };
+
+        $.post("user", postData, function (response) {
+            $("#content").html(response);
+        });
+    });
+
     /*
 	//mass search button
 	$("#mass_search").submit(function (e) {
