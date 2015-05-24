@@ -2,6 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/G:/NetbeansProjects/Alliance%20E-Learning%20System%20Prototype/src/java/com/aes/controller/UserController.java</file>
+            <file>file:/G:/NetbeansProjects/Alliance%20E-Learning%20System%20Prototype/web/pages/user/course/course_outline.jsp</file>
+            <file>file:/G:/NetbeansProjects/Alliance%20E-Learning%20System%20Prototype/web/pages/static/j2ee_course_outline.jsp</file>
+            <file>file:/G:/NetbeansProjects/Alliance%20E-Learning%20System%20Prototype/web/pages/user/course/course_exams.jsp</file>
+            <file>file:/G:/NetbeansProjects/Alliance%20E-Learning%20System%20Prototype/web/pages/user/exam/past_exams.jsp</file>
+        </group>
     </open-files>
 </project-private>
