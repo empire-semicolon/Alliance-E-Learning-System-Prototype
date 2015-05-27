@@ -21,6 +21,15 @@
 
     <!-- Custom Fonts (for images) -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="../bower_components/media/css/jquery.dataTables.css">  
+    
+    <!-- jQuery -->
+    <script type="text/javascript" charset="utf-8" src="../bower_components/media/js/jquery.js"></script>
+    
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf-8" src="../bower_components/media/js/jquery.dataTables.js"></script>
 		
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

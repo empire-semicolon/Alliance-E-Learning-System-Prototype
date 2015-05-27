@@ -13,3 +13,6 @@
 <!-- AJAX Scripts -->
 <script src="../dist/js/user_ajax.js"></script>
 <script src="../dist/js/admin_ajax.js"></script>
+
+<!-- DataTables Scripts -->
+<script src="../bower_components/media/js/dataTables-init.js"></script>

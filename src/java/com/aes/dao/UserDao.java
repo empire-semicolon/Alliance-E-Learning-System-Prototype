@@ -197,7 +197,7 @@ public class UserDao {
         Connection connection = db.getConnection();         
         
         try {
-            PreparedStatement stmt = connection.prepareStatement("Select * from user_details where userId = ?");
+            PreparedStatement stmt = connection.prepareStatement("Select * from user_details where userId = ? LIMIT 1");
             
             stmt.setInt(1, userId);
             ResultSet rs = stmt.executeQuery();
@@ -217,7 +217,7 @@ public class UserDao {
                 temp.setIntRecordStatus(rs.getInt("recordStatus"));
                 temp.setIntUserTypeID(rs.getInt("user_type_userTypeId"));                                               
                 temp.setStrBusinessUnit(rs.getString("business_unit"));
-                temp.setIntCompanyId(rs.getInt("companyID"));
+                //temp.setIntCompanyId(rs.getInt("companyID"));
                 return temp;
             }                  
             rs.close();

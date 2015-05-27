@@ -1,6 +1,7 @@
+
 <div class="row">
 	<div class="col-lg-12">
-		<h2 class="page-header">Upcoming Exams</h2>
+		<h2 class="page-header">Past Courses</h2>
 	</div>
 	<!-- /.col-lg-12 -->
 </div>
@@ -10,26 +11,22 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<div class="table-responsive">
-					<table id="upcomingexams" class="table table-striped">
+					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th>Title</th>
 								<th>Course</th>
-								<th>Due</th>
-								<th>Time Limit</th>
+								<th>Instructor</th>
+								<th>Date Finished</th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Java Assessment</td>
-								<td>J2EE Intermediate</td>
-								<td>May 15, 2015 11:59pm</td>
-								<td>90 mins</td>
+								<td>Java Essentials Training</td>
+								<td>Mr. Anon Yuso</td>
+								<td>Dec 18, 2014</td>
 								<td>
-									<a href="take_exam.jsp">
-										<button type="button" class="btn btn-primary">Take Exam</button>
-									</a>
+									<button type="button" class="btn btn-primary">View Course</button>
 								</td>
 							</tr>
 						</tbody>
